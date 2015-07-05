@@ -94,32 +94,32 @@ layout: false
 # Organisation générale des données (2)
 ```xml
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="fr">
-        <text>
-            <group><!-- Encodage des actes du chapitre -->
-                <text><!-- Acte -->
-                    <front><!-- informations sur l'acte -->
-                        <!--(titre, regeste, etc.)--></front>
-                    <body>
-                        <div type="tradition">
-                            <!-- Tableau de la tradition -->
+    <text xml:id="aulne-acte17">
+        <group><!-- Encodage des actes du chapitre -->
+            <text><!-- Acte -->
+                <front><!-- informations sur l'acte -->
+                <!--(titre, regeste, etc.)--></front>
+                <body>
+                    <div type="tradition">
+                     <!-- Tableau de la tradition -->
+                        <listWit>
                             <listWit>
-                                <listWit>
-                                    <witness><!-- témoin --></witness>
-                                </listWit>
+                                <witness><!-- témoin --></witness>
                             </listWit>
-                        </div>
-                        <div type="transcription">
-                            <p><!-- transcription --></p>
-                        </div>
-                    </body>
-                    <back>
-                        <div type="note">
-                            <note><!-- Notes --></note>
-                        </div>
-                    </back>
-                </text>
-            </group>
-        </text>
+                        </listWit>
+                    </div>
+                    <div type="transcription">
+                        <p><!-- transcription --></p>
+                    </div>
+                </body>
+                <back>
+                    <div type="note">
+                        <note><!-- Notes --></note>
+                    </div>
+                </back>
+            </text>
+        </group>
+        </tex>
 </TEI>
 ```
 ---
@@ -331,7 +331,7 @@ Exemple:
 ```xml
 <listWit xml:id="aulne-acte17-copies">
     <witness xml:id="aulne-acte17-B"><label>B</label> Cart, blanc, 
-        t. II, p. 9a-b, n° XVII : 
+        t. II, p. 9a-b, n° XVII : 
         <quote xml:lang="lat" type="rubric">De novem modiis
          et dimidio bladi quos conventus Paracliti percipiet 
          in granchia de Alna</quote>.</witness>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="dugny" xml:lang="fre">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Le cartulaire blanc de Saint-Denis : <!-- à compléter --></title>
+                <funder><!-- à compléter --></funder>
+                <principal>
+                    <!-- à compléter -->
+                </principal>
+                <respStmt>
+                    <resp><!-- à compléter --></resp>
+                    <name><!-- à compléter --></name>
+                </respStmt>
+            </titleStmt>
+            <editionStmt>
+                <edition><!-- à compléter --></edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher><!-- à compléter --></publisher>
+                <date><!-- à compléter --></date>
+                <idno><!-- à compléter --></idno>
+                <address>
+                    <addrLine><!-- à compléter --></addrLine>
+                </address>
+                <availability status="restricted">
+                    <p><!-- à compléter --></p>
+                </availability>
+            </publicationStmt>
+            <seriesStmt>
+                <title><!-- à compléter --></title>
+                <!-- à compléter -->
+            </seriesStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <!-- à compléter -->
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <projectDesc>
+                <p><!-- à compléter --></p>
+            </projectDesc>
+        </encodingDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="fre"><!-- à compléter --></language>
+                <!-- à compléter -->
+            </langUsage>
+        </profileDesc>
+        <!-- <revisionDesc>
+          <change></change>
+        </revisionDesc> -->
+    </teiHeader>
+    <text>
+        <group decls="#CB-dugny">
+            <text xml:id="dugny-acte1">
+                <!-- à compléter -->
+                <body>
+                    <div><!-- à compléter --></div>
+                </body>
+            </text>
+        </group>
+    </text>
+</TEI>

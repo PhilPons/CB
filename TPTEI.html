@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
       <title>Encodage TEI du CB</title>
-      <link href="themes/remark-dark.css" rel="stylesheet" media="all" type="text/css">
+      <link href="themes/remark-dark.css" rel="stylesheet" media="all" type="text/css"/>
   </head>
   <body>
     <textarea id="source">
@@ -57,8 +57,6 @@ template: inverse
 
 - lier le document au schéma
 
-- compléter la structure générale du document TEI 
-
 - encoder le teiHeader
 
 Pour chaque acte :
@@ -77,65 +75,144 @@ Pour chaque acte :
 name: organisation des données
 layout: false
 
-# Organisation générale des données (1)
-## Le **teiHeader**
+# Modèle général des données 
 
 ```xml
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="fr">
-    <teiHeader><!-- à compléter --></teiHeader> 
-    <!-- Métadonnées sur le chapitre du CB -->
-</TEI>
-```
-
----
-name: organisation des données
-layout: false
-
-# Organisation générale des données (2)
-```xml
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="fr">
-    <text xml:id="aulne-acte17">
-        <group><!-- Encodage des actes du chapitre -->
-            <text><!-- Acte -->
-                <front><!-- informations sur l'acte -->
-                <!--(titre, regeste, etc.)--></front>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="aulnay" xml:lang="fre">
+    <teiHeader><!-- Métadonnées du projet --></teiHeader>
+    <text decls="#CB-aulne"><!-- Chapitre "L'Aulne" -->
+        <group>
+            <text xml:id="aulne-acte1"><!-- Acte 1 du chapitre -->
+                <front><!-- Informations générales sur l'acte -->
+                </front>
                 <body>
-                    <div type="tradition">
-                     <!-- Tableau de la tradition -->
-                        <listWit>
-                            <listWit>
-                                <witness><!-- témoin --></witness>
-                            </listWit>
-                        </listWit>
+                    <div type="tradition"><!-- Tableau de la tradition -->
                     </div>
-                    <div type="transcription">
-                        <p><!-- transcription --></p>
+                    <div type="transcription"><!-- Transcription de l'acte -->
                     </div>
                 </body>
                 <back>
-                    <div type="note">
-                        <note><!-- Notes --></note>
+                    <div type="notes">
+                        <note><!-- Note --></note>
                     </div>
                 </back>
             </text>
         </group>
-        </tex>
-</TEI>
+    </text>
+</TEI>    
 ```
+
 ---
-name: encodage du text
+name: programme encodage
 template: inverse
 class: center middle
 
 # L'encodage du ```teiHeader```
 
 ---
-name: teiHeader
+name: organisation des données
 layout: false
 
-# 1/ Le ```teiHeader```
+# Le **teiHeader** (1): mentions de responsabilités
 
-(à compléter)
+```xml
+        <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="aulnay" xml:lang="fre">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title><!-- Titre du chapitre --></title>
+                <funder><!-- Institution qui fournit les fonds -->
+                </funder>
+                <principal xml:id="OGJ"><!-- Responsable principal -->
+                    <forename>Olivier</forename>
+                    <surname>Guyotjeannin</surname>
+                </principal>
+                <respStmt>
+                    <resp><!-- Mention de responsabilité --></resp>
+                    <name xml:id="PP"><!-- Responsable du travail -->
+                    </name>
+                </respStmt>
+            </titleStmt>
+            (...)
+```
+---
+# Le **teiHeader** (2): mentions de publication
+
+```xml
+(...)
+<editionStmt>
+    <edition><!-- Infos sur l'édition électronique --></edition>
+</editionStmt>
+<publicationStmt>
+    <publisher><!-- Responsable de la publication --></publisher>
+    <date>2015</date>
+    <idno>http://saint-denis.fr/cartulaire/tome2/aulne/</idno><!-- URL -->
+    <address>
+        <addrLine>65 Rue de Richelieu</addrLine>
+        <addrLine>75002 Paris</addrLine>
+        <addrLine>tél. +33 (0)1 55 42 75 00</addrLine>
+        <addrLine>http://www.enc.sorbonne.fr/</addrLine>
+    </address>
+    <availability status="restricted">
+        <p><!-- Autorisations d'accès et de réutilisation --></p>
+    </availability>
+</publicationStmt>
+(...)
+```
+---
+# Le **teiHeader** (3): mentions de publication (suite)
+
+```xml
+(...)
+<seriesStmt>
+    <title>Éditions en ligne de l’École des chartes</title>
+    <idno type="URI">http://elec.enc.sorbonne.fr</idno>
+    <idno type="vol">3</idno>
+</seriesStmt>
+(...)
+```
+
+---
+# Le **teiHeader** (4): description de la source et des principes d'encodage
+
+```xml
+(...)
+<sourceDesc>
+    <msDesc xml:id="CB-aulne">
+        <msIdentifier>
+            <country>France</country>
+            <settlement>Paris</settlement>
+            <institution>Archives nationales</institution>
+            <idno>LL 1158, p. 1-18</idno>
+        </msIdentifier>
+    </msDesc>
+</sourceDesc>
+</fileDesc>
+<encodingDesc>
+    <projectDesc><!-- Informations sur le projet --></projectDesc>
+</encodingDesc>
+(...)
+```
+
+---
+# Le **teiHeader** (5): les langues
+
+```xml
+<profileDesc>
+    <langUsage><!-- Langues utilisées dans le corpus -->
+        <language ident="fre">français (langue de l’édition, langue
+            par défaut)</language>
+        <language ident="fro">français ancien (langue utilisée dans 
+            le document édité)</language>
+        <language ident="frm">français moyen (langue de certaines 
+            citations faites par l’éditeur scientifique)</language>
+        <language ident="lat">latin (langue principale du document 
+            édité)</language>
+    </langUsage>
+</profileDesc>
+</teiHeader>
+</TEI>
+```
 
 ---
 name: encodage du text
@@ -383,24 +460,50 @@ Exemples:
 
 # 9/ Les éléments *inline*
 
-### Fin de l'encodage *sémantique*:
+- les titres d'oeuvre sont à encoder dans des éléments ```title``` ([définition](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html))
 
-- les titres d'oeuvre sont à encoder dans des éléments ```title```
-
-- les mots dans une autre langue s'encodent dans les éléments ```foreign```
+- les mots dans une autre langue s'encodent dans les éléments ```foreign``` ([définition](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-foreign.html))
     - avec l'attribut ```@xml:lang``` pour préciser la langue
+
+- les mots ajoutés (notamment en marge) s'insèrent dans un élément ```add``` ([définition](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-add.html))
+
+- les mots biffés sont à encoder dans un élément ```del``` ([définition](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-del.html))
+
+- les mots redondants sont à encoder dans un élément ```surplus``` ([définition](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-surplus.html))
 
 - ... etc.
 
 ---
-# Annexe: nommage des identifiants
+# Les attributs (1)
 
-### Toutes les valeurs des attributs ```@xml:id``` se forment de la même manière
+### La sémantique de chaque élément peut être précisée et adaptée à un projet donné par l'utilisation d'attributs
 
-- aulne-acte17 "nom du chapitre - acte n° d'acte - + informations complémentaires. 
+- des attributs pour identifier de manière unique des éléments:
+    - ```@xml:id``` sur plusieurs éléments
+        - ```msDesc```, ```text```, ```listWit```, ```witness```, ```note```, etc.
+        - pour le projet, ces identifiants se construisent ainsi: *aulne-acteX*, avec des compléments d'informations selon le contexte. 
+        Par exemple: 
+.red[aulne-acte17]
 
-Par exemple: .red[aulne-acte17]
-    - 
+- des attributs pour renvoyer à ces identifiants:
+    - ```@target```, ```@decls```, ```@wit``` 
+        - la valeur de ces attributs se construit avec la valeur de l'identifiant précédée de *#*.
+
+---
+# Les attributs (2)
+
+- des attributs  pour renseigner la langue:
+    - ```@xml:lang```
+        - le ```teiHeader``` donne l'ensemble des valeurs possibles pour cet attribut
+
+- des attributs pour typer des éléments:
+    - ```@type```
+        - le schéma propose par défaut un ensemble de valeurs possibles selon les contextes, par ex. 
+.red[tradition], .red[transcription], etc.
+
+- des attributs pour donner des informations de mise en forme:
+    - ```@rend``` avec par exemple la valeur 
+.red[sup] pour des mots ou lettres en exposant
 
 ---
 name: part2
@@ -419,6 +522,14 @@ Paris: Comité des travaux historiques et scientifiques: École nationale des ch
 - Guyotjeannin, Olivier. 1999. “La science des archives à Saint-Denis (fin du XIIIe-début du XVIe siècle).” 
 In *Saint-Denis et la royauté: études offertes à Bernard Guenée*, edited by Françoise Autrand, Claude Gauvard 
 and Jean-Marie Moeglin, 339-353. Paris: Publications de la Sorbonne.
+
+---
+name: part2
+template: inverse
+class: center middle
+
+# Merci !
+
 
 </textarea><script src="js/remark-0.6.5.min.js" type="text/javascript"></script><script type="text/javascript">
         var hljs = remark.highlighter.engine;

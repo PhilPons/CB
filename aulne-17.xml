@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="sourcesTEI-CB/cbsd-schema.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="dugny" xml:lang="fre">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Le cartulaire blanc de Saint-Denis : chapitre de l'Aulne</title>
+                <funder>École nationale des chartes</funder>
+                <principal xml:id="OGJ">
+                    <forename>Olivier</forename>
+                    <surname>Guyotjeannin</surname>
+                </principal>
+                <respStmt>
+                    <resp>2015 Encodage TEI</resp>
+                    <name xml:id="PP">Philippe Pons</name>
+                </respStmt>
+            </titleStmt>
+            <editionStmt>
+                <edition>1<hi rend="sup">ère</hi> édition</edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>École nationale des chartes</publisher>
+                <date>2015</date>
+                <idno>http://saint-denis.enc.sorbonne.fr/cartulaire/tome2/aulne/</idno>
+                <address>
+                   <addrLine>19, rue de la Sorbonne</addrLine>
+                    <addrLine>75005 Paris</addrLine>
+                    <addrLine>tél.: +33 (0)1 55 42 75 00</addrLine>
+                    <addrLine>http://www.enc.sorbonne.fr/</addrLine>
+                </address>
+                <availability status="restricted">
+                    <p>L’École nationale des chartes met à disposition cette ressource électronique
+                        structurée, protégée par le code de la propriété intellectuelle sur les
+                        bases de données (<ref
+                            target="http://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006279245&amp;cidTexte=LEGITEXT000006069414"
+                            type="externalLink">L341-1</ref>), selon les termes de la licence
+                        Creative Commons : « <ref
+                            target="http://creativecommons.org/licenses/by-nc-nd/2.0/fr/"
+                            type="externalLink">Paternité - Pas d’Utilisation Commerciale - Pas de
+                            Modification ; 2.0 France</ref> ».</p>
+                    <p>Pas d’Utilisation Commerciale — Nous souhaitons encourager l’utilisation et
+                        l’amélioration de nos ressources électroniques, pour les intérêts de
+                        l’enseignement et de la recherche. Toute autorisation au-delà du champ de
+                        cette licence doit être obtenue auprès de nous.</p>
+                    <p>Pas de Modification — Afin de mieux servir la communauté scientifique, nous
+                        nous engageons à conserver et à toujours offrir publiquement la version la
+                        plus à jour de nos ressources électroniques par une URI pérenne. Nous nous
+                        engageons à les corriger et à les améliorer, à intégrer les contributions
+                        qui lui sont soumises (après validation par un comité scientifique), et à
+                        référencer l’origine de ces contributions. Toute modification de la
+                        ressource qui ne serait pas reversée à la version de référence sous notre
+                        autorité éditoriale doit faire l’objet d’un accord, afin de ne pas disperser
+                        les contributions et de permettre les meilleures conditions possibles de
+                        collaboration scientifique.</p>
+                    <p>Paternité — L’École nationale des chartes demande à ce que toute publication
+                        dérivée de ses ressources électroniques comporte : <list>
+                            <item>un lien vers l’adresse pérenne de la dernière version de la
+                                ressource sur notre site ;</item>
+                            <item>la date du fichier source utilisé ;</item>
+                            <item>nos noms.</item>
+                        </list></p>
+                    <p>Tout litige soulevé par le non respect des termes de cette licence sera
+                        soumis à la juridiction des tribunaux de Paris.</p>
+
+                </availability>
+            </publicationStmt>
+            <seriesStmt>
+                <title>Éditions en ligne de l’École des chartes</title>
+                <idno type="URI">http://elec.enc.sorbonne.fr</idno>
+                <idno type="vol">3</idno>
+            </seriesStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier xml:id="CB-aulne">
+                        <country>France</country>
+                        <settlement>Paris</settlement>
+                        <institution>Archives nationales</institution>
+                        <idno>LL 1158, p. 1-18</idno>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <projectDesc>
+                <p>Ce fichier fait partie du corpus numérique en cours de constitution dans le cadre
+                    du projet de recherche sur les chartes médiévales de l’abbaye de Saint-Denis. Il
+                    est issu, par conversion manuelle, d’un fichier produit au traitement de
+                    texte.</p>
+            </projectDesc>
+        </encodingDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="fre">français (langue de l’édition, langue par défaut)</language>
+                <language ident="fro">français ancien (langue utilisée dans le document
+                    édité)</language>
+                <language ident="frm">français moyen (langue de certaines citations faites par
+                    l’éditeur scientifique)</language>
+                <language ident="lat">latin (langue principale du document édité)</language>
+            </langUsage>
+        </profileDesc>
+        <!-- <revisionDesc>
+          <change></change>
+        </revisionDesc> -->
+    </teiHeader>
+    <text>
+        <group decls="#CB-aulne">
+            <text xml:id="aulne-acte17">
+                <front>
+                    <titlePart>L'Aulne 17</titlePart>
+                    <docDate>
+                        <date when="1233-09">1233, septembre </date>
+                    </docDate>
+                    <div type="summary">
+                        <p>L’abbesse E(rmengarde) et le convent du Paraclet(1) baillent à
+                            Saint-Denis tout ce que leur abbaye percevait des dîmes, grandes et
+                            petites, de Nogent[-sur-Seine](2) et de Fontaine-Mâcon(3), contre une
+                            redevance annuelle de neuf muids et demi de grains, mesure de Nogent,
+                            quérable à Pâques dans la grange de Saint-Denis à L’Aulne. Ce total se
+                            décompose en dix-huit setiers de blé, dix-huit setiers de seigle, trois
+                            muids trois setiers d’orge, trois muids trois setiers d’avoine, mesure
+                            susdite. Si la guerre ou une tempête commune(4) venaient à diminuer le
+                            rapport de la dîme, la redevance serait d’autant réduite, à l’estimation
+                            de deux prud'hommes nommés chacun par l'une des parties ; si le comte de
+                            Champagne, ses baillis ou d'autres venaient à saisir, du fait des
+                            moniales, le fruit des dîmes, celles-ci seraient tenues de faire
+                            délivrer à Saint-Denis lesdits fruits avant tout versement des
+                            redevances qui leur sont dues. Saint-Denis remet au Paraclet, au cens
+                            coutumier, les prés de feu Constant, engagés, sis à Marnay(5) au-delà de
+                            la Seine, à savoir sept arpents au cens de 3 sous 6 deniers, et d'autres
+                            prés et terres en-deçà, soit environ vingt-sept arpents au cens de 5
+                            sous quérables au prieuré des moniales à Marnay à la Saint-Jean
+                            Baptiste ; la terre dite de Culoysun, pour 4 sous, la terre de feu
+                            Joylein et la terre de feu Soynus, pour 6 deniers, portables au prieuré
+                            (domus) de L'Aulne aux octaves de la Saint-Denis.</p>
+                    </div>
+                </front>
+                <body>
+                    <div type="transcription">
+                        <p>Omnibus presentes litteras inspecturis, E(rmengardis) Dei permissione
+                            Paraclitensis(1) ecclesie ministra humilis totusque ejusdem ecclesie
+                            conventus, salutem in Domino. Noverint universi quod nos quicquid
+                            habebamus in decimis grossis et minutis in parochiis de Nogento(2) et de
+                            Fonte Maconis(3) admodiavimus imperpetuum religiosis viris abbati et
+                            conventui Sancti Dyonisii in Frantia pro novem modiis bladi et dimidio
+                            ad mensuram Nogenti ; quod bladum nobis vel nostris nuntiis certis
+                            tenentur annuatim infra Pascha persolvere in granchia Beati Dyonisii de
+                            Alna, videlicet decem et octo sextarios frumenti, decem et octo
+                            sextarios siliginis, tres modios et tres sextarios ordei, tres modios et
+                            tres sextarios avene ad predictam mensuram ; ita tamen quod, si in istis
+                            parrochiis vel altera illarum aliquo anno guerra vel tempestas
+                            communis(4) proveniret, per que proventus dictarum(a) decimarum minus
+                            valerent, ipsi illo anno de dicta admodiatione nobis minus reddere
+                            tenerentur secundum estimationem duorum bonorum virorum, quorum ipsi
+                            unum et nos alium eligeremus ; si vero per comitem Campanie vel balivos
+                            suos vel alios occasione nostra fructus dictarum decimarum arestari
+                            contingeret vel(b) seisiri, nos predictis abbati et conventui Beati
+                            Dyonisii vel eorum ministris teneremur ipsos fructus facere liberari
+                            antequam bladum dicte admodiationis aliquatenus reciperemus. Predicti
+                            etiam abbas et conventus nobis et ecclesie nostre concesserunt ut
+                            imperpetuum teneamus ad censum sibi debitum et consuetum prata que
+                            fuerunt Constancii pignore(c), sita apud Marnay(5) ultra Secanam,
+                            videlicet septem arpenta pro tribus solidis et VI denariis censualibus,
+                            et alia prata et terras citra Secanam circiter XXVII arpentorum pro
+                            quinque solidis prioratui nostro de Marnay in festo sancti Johannis
+                            Baptiste persolvendis, et terram que dicitur Terra de Culoysun, pro
+                            IIIIor solidis, et terram que fuit Joylein et terram que fuit defuncti
+                            Soyni pro VI denariis domui de Alna in octabis Beati Dyonisii
+                            persolvendis ; ita quod per eosdem abbatem et conventum ad vendendum
+                            predicta decetero non compelleremur. In cujus rei testimonium et
+                            munimen, presentibus litteris sigilla nostra fecimus apponi. Actum anno
+                            gratie M° CC° tricesimo tercio, mense septembri.</p>
+                    </div>
+                </body>
+                <back>
+                    <div type="notes">
+                        <note xml:id="aulne-acte17-n-1">Le Paraclet, abbaye de bénédictines, dioc, Troyes (auj. ruines sur la
+                            commune de Ferreux-Quincey, Aube, cant, Nogen-sur-Seine).</note>
+                    </div>
+                </back>
+            </text>
+        </group>
+    </text>
+</TEI>
